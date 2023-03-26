@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from 'react-navigation-stack';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+import SplashScreen from "./screens/start/Splash";
+import MainScreen from './screens/start/MainScreen';
+import RegisterScreen from './screens/start/RegisterScreen';
+import LoginScreen from './screens/start/LoginScreen';
+import MenuScreen from './screens/menu/MenuScreen';
+import SettingsScreen from './screens/menu/SettingsScreen';
+import AccountScreen from './screens/menu/AccountScreen';
+import ReactionTestScreen from './screens/menu/ReactionTestScreen';
+import MemoryTestScreen from './screens/menu/MemoryTestScreen';
+import ReactionT1Screen from './screens/tests/ReactionT1Screen';
+import MemoryT1Screen from './screens/tests/MemoryT1Screen';
+
+const AppNavigator = createStackNavigator({
+  SplashScreen: { screen: SplashScreen },
+  MainScreen: { screen: MainScreen },
+  RegisterScreen: { screen: RegisterScreen },
+  LoginScreen: { screen: LoginScreen },
+  MenuScreen: { screen: MenuScreen },
+  SettingsScreen: { screen: SettingsScreen },
+  AccountScreen: { screen: AccountScreen },
+  ReactionTestScreen: { screen: ReactionTestScreen },
+  MemoryTestScreen: { screen: MemoryTestScreen },
+  ReactionT1Screen: { screen: ReactionT1Screen },
+  MemoryT1Screen: { screen: MemoryT1Screen },
 });
+
+export default createAppContainer(AppNavigator);
