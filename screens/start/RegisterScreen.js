@@ -6,6 +6,9 @@ import { Card, Button, TextInput } from 'react-native-paper';
 import LogoReactOn from '../../components/LogoReactOn';
 
 class RegisterScreen extends Component {
+  static navigationOptions = {
+    header: null,
+  };
   render() {
     const { navigation } = this.props;
     return (

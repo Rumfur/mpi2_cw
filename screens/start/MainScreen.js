@@ -3,6 +3,9 @@ import { Text, View, Image, StyleSheet } from 'react-native';
 import { Button } from 'react-native-paper';
 
 class MainScreen extends Component {
+  static navigationOptions = {
+    header: null,
+  };
   render() {
     const { navigation } = this.props;
     return (

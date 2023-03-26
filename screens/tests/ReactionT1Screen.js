@@ -1,14 +1,31 @@
 import React, { Component } from "react";
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
+import bgPink from '../../assets/bgPink.png'
+import bgBlue from '../../assets/bgBlue.png'
+
 class ReactionT1Screen extends Component {
+  constructor() {
+    super();
+    this.state = { showSoundImg: true };
+  };
+
+  renderImage() {
+    var imgSource = this.state.showSoundImg? bgPink : bgBlue;
+    return (
+      <Image
+        source={ imgSource }
+      />
+    );
+  }
+
   render() {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
-        <Image source={require('../../assets/bgPink.png')} style={styles.backgroundImage} /> 
+        {this.renderImage()}
         <View style={styles.layout}>
-
+          {this.renderImage()}
           <View>
             <TouchableOpacity
             onPress={() => navigation.navigate("ReactionTestScreen")}>

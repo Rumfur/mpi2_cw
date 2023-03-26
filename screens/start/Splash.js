@@ -7,7 +7,9 @@ class Splash extends Component {
 
     setTimeout(() => { props.navigation.navigate("MainScreen"); }, 1000);
   }
-
+  static navigationOptions = {
+    header: null,
+  };
   render() {
     const { navigation } = this.props;
     return (

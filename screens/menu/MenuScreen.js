@@ -6,8 +6,12 @@ import { Card, Button, TextInput } from 'react-native-paper';
 import LogoReactOn from '../../components/LogoReactOn';
 
 class MenuScreen extends Component {
+  static navigationOptions = {
+    header: null,
+  };
   render() {
     const { navigation } = this.props;
+    
     return (
       <View style={styles.container}>
         <Image source={require('../../assets/bgBlackWhite.png')} style={styles.backgroundImage} /> 

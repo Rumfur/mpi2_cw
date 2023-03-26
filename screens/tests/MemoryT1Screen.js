@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 class ReactionM1Screen extends Component {
+  static navigationOptions = {
+    header: null,
+  };
   render() {
     const { navigation } = this.props;
     return (

@@ -6,6 +6,9 @@ import { Button, TextInput } from 'react-native-paper';
 import LogoReactOn from '../../components/LogoReactOn';
 
 class LoginScreen extends Component {
+  static navigationOptions = {
+    header: null,
+  };
   render() {
     const { navigation } = this.props;
     return (

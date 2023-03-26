@@ -16,17 +16,17 @@ import ReactionT1Screen from './screens/tests/ReactionT1Screen';
 import MemoryT1Screen from './screens/tests/MemoryT1Screen';
 
 const AppNavigator = createStackNavigator({
-  SplashScreen: { screen: SplashScreen },
-  MainScreen: { screen: MainScreen },
-  RegisterScreen: { screen: RegisterScreen },
-  LoginScreen: { screen: LoginScreen },
-  MenuScreen: { screen: MenuScreen },
-  SettingsScreen: { screen: SettingsScreen },
-  AccountScreen: { screen: AccountScreen },
-  ReactionTestScreen: { screen: ReactionTestScreen },
-  MemoryTestScreen: { screen: MemoryTestScreen },
-  ReactionT1Screen: { screen: ReactionT1Screen },
-  MemoryT1Screen: { screen: MemoryT1Screen },
+  SplashScreen: { screen:SplashScreen, headerShown: false },
+  MainScreen: { screen: MainScreen, headerShown: false },
+  RegisterScreen: { screen: RegisterScreen, headerShown: false },
+  LoginScreen: { screen: LoginScreen, headerShown: false },
+  MenuScreen: { screen: MenuScreen, headerShown: false },
+  SettingsScreen: { screen: SettingsScreen, headerShown: false },
+  AccountScreen: { screen: AccountScreen, headerShown: false },
+  ReactionTestScreen: { screen: ReactionTestScreen, headerShown: false },
+  MemoryTestScreen: { screen: MemoryTestScreen, headerShown: false },
+  ReactionT1Screen: { screen: ReactionT1Screen, headerShown: false },
+  MemoryT1Screen: { screen: MemoryT1Screen, headerShown: false },
 });
 
 export default createAppContainer(AppNavigator);

@@ -3,6 +3,9 @@ import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { Card, Button, TextInput } from 'react-native-paper';
 
 class SettingsScreen extends Component {
+  static navigationOptions = {
+    header: null,
+  };
   render() {
     const { navigation } = this.props;
     return (
